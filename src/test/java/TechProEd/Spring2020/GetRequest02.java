@@ -21,13 +21,13 @@ public class GetRequest02 {
 	public void getTest01() {
 		
 		given().
-		     accept("application/JSON").
+		     accept("application/JSON").//ContentType.JSON is also can be used instead of application/JSON
 		when().
 		     get("https://restful-booker.herokuapp.com/booking").
 		then().
 		     assertThat().
 		     statusCode(200).
-		     contentType("application/JSON");
+		     contentType("application/JSON");//ContentType.JSON is also can be used instead of application/JSON
 	}
 	
 	/*
