@@ -52,7 +52,7 @@ public class RestApiGetRequest02 {
         then().
            assertThat().
            toString().
-           contains("Not Found");
+           contains("Suleyman");
 	
 	}
 }

@@ -72,10 +72,10 @@ public class RestApiGetRequest07 extends BaseTest {
 		System.out.println(json.getString("data.employee_name"));
 		
 		System.out.println(json.getString("data[0].employee_name"));
-		softAssert.assertEquals(json.getString("data[0].employee_name"), "Tiger Nixo","Employee name did not match");
+		softAssert.assertEquals(json.getString("data[0].employee_name"), "Tiger Nixon","Employee name did not match");
 
 		System.out.println(json.getString("data[1].employee_salary"));
-		softAssert.assertEquals(json.getString("data[1].employee_salary"), "17075","Salary did not match");
+		softAssert.assertEquals(json.getString("data[1].employee_salary"), "170750","Salary did not match");
 
 		softAssert.assertAll();
 		response.then().assertThat().statusCode(200);
