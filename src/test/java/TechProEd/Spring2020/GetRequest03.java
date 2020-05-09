@@ -18,7 +18,6 @@ public class GetRequest03 {
      And response body does not contain "TechProEd" 
 	*/
 	
-	//1st Way
 	@Test
 	public void getMethod01() {
 		
@@ -28,12 +27,8 @@ public class GetRequest03 {
 		
 		response.prettyPrint();
 		
-		assertEquals(200, response.statusCode());
-		assertTrue(response.asString().contains("888"));
-		assertFalse(response.asString().contains("Not Found"));	
-	}
-	
-	
-	
-	
+		assertEquals(404, response.statusCode());
+		assertTrue(response.asString().contains("Not Found"));
+		assertFalse(response.asString().contains("TechProEd"));	
+	}	
 }
