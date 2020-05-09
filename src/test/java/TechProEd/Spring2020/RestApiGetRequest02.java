@@ -14,8 +14,7 @@ public class RestApiGetRequest02 {
      And response body contains "Not Found"
      And response body does not contain "TechProEd"
 	*/
-	
-	//1st Way
+
 	@Test
 	public void getTest01() { 
 		
@@ -31,28 +30,5 @@ public class RestApiGetRequest02 {
 	assertFalse(response.asString().contains("TechProEd"));
 	
 	}
-	
-	
-	//2nd Way
-	@Test
-	public void getTest02() { 
-		
-	Response response = given().
-					       accept("application/JSON").
-				        when().
-					       get("http://dummy.restapiexample.com/api/v1/employees/33");
-	
-	response.prettyPrint();
-	
-	response.
-	    then().
-	       assertThat().
-	       statusCode(404);
-	response.
-        then().
-           assertThat().
-           toString().
-           contains("Suleyman");
-	
-	}
+
 }
